@@ -10,6 +10,7 @@ const sayHi = name => {
 }
 
 const greetEveryone = async () => {
+  //b will only start once 'a' is finished
   const a = await sayHi("Andy");
   const b = await sayHi("Joe");
   const c = await sayHi("Jim");
