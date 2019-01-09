@@ -17,10 +17,14 @@ doChore("fold clothes.");
 const betterChore = (chore) => {
   return new Promise((res, rej) => {
     setTimeout(() => {
-      if(chore !== undefined || chore !== null) {
-        res("I have to " + chore);
+      if(typeof chore === 'string') {
+        if(chore == null || chore === "") {
+          rej(Error("Need to specify a chore."));
+        } else {
+          res("I have to " + chore);
+        }
       } else {
-        rej(Error("Need to specify a chore."))
+        rej(Error("Chore needs to be a string."))
       }
     }, 2000)
   })
@@ -28,11 +32,10 @@ const betterChore = (chore) => {
 
 const doTasks = async (task) => {
   let chore = await betterChore(task);
-
   return chore;
 }
 
-doTasks("feed dogs")
+doTasks(45)
   .then(item => {
     console.log(item);
   })
