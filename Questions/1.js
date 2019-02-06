@@ -8,8 +8,7 @@ const fibList = n => {
         if(i === 0) {
             fibNo = i+1;
             arr.push(fibNo);
-        }
-        else if(i === 1) {
+        } else if(i === 1) {
             fibNo = arr[i-1] + 1;
             arr.push(fibNo);
         } else {
@@ -22,7 +21,7 @@ const fibList = n => {
 }
 
 const fibIndex = n => {
-    let foundIndex = fibList(n);
+    let foundIndex = fibList(n);    
     console.log(foundIndex[n-1]);
 
     return foundIndex[n-1];
