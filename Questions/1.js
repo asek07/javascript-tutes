@@ -1,5 +1,5 @@
 //Fibonacci 
-const fib = n => {
+const fibList = n => {
     let arr = new Array();
  
     for(i=0; i <= n; i++) {
@@ -17,7 +17,17 @@ const fib = n => {
             arr.push(fibNo);
         }
     }
-    console.log(arr)
+    console.log(arr);
+    return arr;
 }
 
-fib(10);
+const fibIndex = n => {
+    let foundIndex = fibList(n);
+    console.log(foundIndex[n-1]);
+
+    return foundIndex[n-1];
+}
+
+//Run functions
+fibList(10);
+fibIndex(5);
