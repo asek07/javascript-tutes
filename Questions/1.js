@@ -18,7 +18,7 @@ const fibList = n => {
         }
     }
     console.log(arr);
-    return arr;
+    return arr; 
 }
 
 const fibIndex = n => {
